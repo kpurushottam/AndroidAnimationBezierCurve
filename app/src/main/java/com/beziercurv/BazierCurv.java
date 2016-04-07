@@ -13,6 +13,15 @@ public class BazierCurv  extends Animation{
 // http://www.math.ubc.ca/~cass/gfx/bezier.html
 
 
+    /**
+     *
+     *
+     *   this class
+     *
+     *
+     */
+
+
 
 
         private int mFromXType = ABSOLUTE;
@@ -105,7 +114,7 @@ public class BazierCurv  extends Animation{
             float dx = calcBezier(interpolatedTime, mStart.x, mControl.x, mEnd.x);
             float dy = calcBezier(interpolatedTime, mStart.y, mControl.y, mEnd.y);
 
-            t.getMatrix().setTranslate(dx, dy);
+            t.getMatrix().setTranslate(dx,dy);
         }
 
         @Override
@@ -138,9 +147,24 @@ public class BazierCurv  extends Animation{
          * @param p1               a single dimension of the control point
          * @param p2               a single dimension of the ending point
          */
-        private long calcBezier(float interpolatedTime, float p0, float p1, float p2) {
+
+
+
+
+    private long calcBezier(float interpolatedTime, float p0, float p1, float p2) {
+
             return Math.round((Math.pow((1 - interpolatedTime), 2) * p0)
                     + (2 * (1 - interpolatedTime) * interpolatedTime * p1)
                     + (Math.pow(interpolatedTime, 2) * p2));
-        }
+
+
+
+
+
+    }
+
+
+
+
+
     }

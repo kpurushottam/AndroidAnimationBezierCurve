@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         BazierCurv curv = new BazierCurv( 0, 600, 0, 800);
         curv
                 .setInterpolator(new LinearInterpolator());
-        curv.setDuration(3000);
+        curv.setDuration(6000);
        // curv.setFillAfter(true);
 
         findViewById(R.id.move_object).startAnimation(curv);
